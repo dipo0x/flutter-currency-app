@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+class CurrencyConverterMaterialPage extends StatelessWidget {
+  const CurrencyConverterMaterialPage ({ super.key });
+
+  @override 
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      backgroundColor: Colors.blueGrey, 
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '0', 
+              style: TextStyle(
+                fontSize: 55,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 255, 255, 255)
+              ),
+            ),
+            TextField(
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255)
+              ),
+              decoration: InputDecoration(
+                hintText: 'Please enter the amount in USD',
+                hintStyle: TextStyle(
+                  color: Color.fromARGB(153, 0, 0, 0)
+                ),
+                prefixIcon: Icon(Icons.monetization_on),
+                filled: true,
+                prefixIconColor: Color.fromARGB(153, 0, 0, 0),
+                fillColor: Colors.white,
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 2.0,
+                    style: Borderstyle.solid,
+                    color: Colors.black,
+
+                  )
+                )
+              ),
+            )
+          ],
+        ), 
+      ),
+    );
+  }
+}
