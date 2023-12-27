@@ -17,6 +17,17 @@ class _CurrencyConverterMaterialPageState
   final TextEditingController textEditingController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
     Widget build(BuildContext context) {
       final border = OutlineInputBorder(
           borderSide: const BorderSide(
